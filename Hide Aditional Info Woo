@@ -1,0 +1,13 @@
+/**
+
+ *        Remove Additional Information Tab @ WooCommerce Single Product Page
+
+  */
+
+  add_filter( 'woocommerce_product_tabs', 'njengah_remove_product_tabs', 9999 );
+
+  function njengah_remove_product_tabs( $tabs ) {
+
+    unset( $tabs['additional_information'] );
+
+    return $tabs;
